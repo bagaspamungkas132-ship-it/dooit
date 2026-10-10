@@ -217,4 +217,6 @@ c1, c2, _ = st.columns([2, 2, 3])
 c1.link_button("Chat WhatsApp", wa("Halo, saya tertarik dengan jasa olah data/dashboard."), type="primary")
 if EMAIL:
     c2.link_button("Kirim email", f"mailto:{EMAIL}")
+st.caption("Tombol WhatsApp tidak terbuka dari dalam aplikasi X atau Instagram? Salin nomor di bawah, atau buka halaman ini lewat browser (menu titik tiga, lalu Buka di browser).")
+st.code(f"+{WHATSAPP}", language=None)
 st.caption(f"© 2026 {BRAND}")
