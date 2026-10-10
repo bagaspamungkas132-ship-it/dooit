@@ -5,7 +5,7 @@ import pandas as pd
 import streamlit as st
 
 # ---- Ubah di sini ----
-WHATSAPP = "6285727645913"  # tanpa + dan 0 di depan
+WHATSAPP = "6285157916011"  # tanpa + dan 0 di depan
 EMAIL = ""  # isi untuk menampilkan tombol email
 BRAND = "Jasa Olah Data"
 BASE = {"Data cleaning": 250_000, "Analisis data & laporan": 500_000, "Dashboard interaktif": 1_500_000}
