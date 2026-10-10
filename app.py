@@ -156,6 +156,7 @@ services = [
     ("Analisis data & laporan rutin", "Ringkasan KPI, tren, dan temuan untuk pengambilan keputusan. Bisa sekali jadi atau berkala dengan template otomatis.", "mulai Rp 500 rb", "per proyek"),
     ("Dashboard interaktif", "Dashboard di Excel, Power BI, atau Looker Studio dengan KPI utama dan filter. Termasuk panduan singkat dan 2 kali revisi.", "mulai Rp 1,5 jt", "per dashboard"),
     ("Kelas privat Excel & statistik", "Sesi online satu lawan satu, materi disesuaikan dengan level dan kebutuhan kerja Anda.", "mulai Rp 100 rb", "per jam"),
+    ("Pembahasan soal matematika & statistik", "Soal latihan atau tugas dikerjakan langkah demi langkah dengan penjelasan di setiap langkah, supaya Anda paham caranya, bukan hanya mendapat jawaban.", "mulai Rp 50 rb", "per soal"),
 ]
 for title, desc, price, unit in services:
     with st.container(border=True):
@@ -163,6 +164,17 @@ for title, desc, price, unit in services:
         left.markdown(f"**{title}**")
         left.write(desc)
         right.markdown(f'<div class="price">{price}<br><span class="small">{unit}</span></div>', unsafe_allow_html=True)
+
+with st.expander("Lihat contoh pembahasan soal matematika"):
+    st.markdown("**Soal:** Tentukan turunan dari")
+    st.latex(r"f(x) = x^2 \sin x")
+    st.markdown("**Langkah 1.** Fungsi ini adalah hasil kali dua fungsi, jadi pakai aturan hasil kali:")
+    st.latex(r"(uv)' = u'v + uv'")
+    st.markdown("**Langkah 2.** Misalkan u = x² dan v = sin x, maka:")
+    st.latex(r"u' = 2x, \quad v' = \cos x")
+    st.markdown("**Langkah 3.** Masukkan ke aturan hasil kali:")
+    st.latex(r"f'(x) = 2x \sin x + x^2 \cos x")
+    st.caption("Setiap jawaban disertai alasan di balik tiap langkah, bukan hanya hasil akhirnya.")
 
 # ---- Cara kerja ----
 st.markdown("## Cara kerja")
@@ -185,6 +197,7 @@ faqs = [
     ("Apakah data saya aman?", "Data hanya dipakai untuk pekerjaan Anda dan tidak dibagikan ke pihak lain. Anda juga boleh mengirim data yang sudah disamarkan."),
     ("Saya tidak punya data yang rapi. Apakah tetap bisa?", "Bisa. Data berantakan justru kasus yang paling sering saya tangani. Kirim contohnya dan saya beri gambaran apa yang bisa dilakukan."),
     ("Bagaimana pembayarannya?", "Pembayaran dibicarakan di penawaran, umumnya sebagian di awal dan sisanya setelah serah terima."),
+    ("Apakah menerima soal ujian atau skripsi?", "Saya membantu membahas dan menjelaskan soal latihan, tugas, dan konsep agar Anda paham. Saya tidak menerima joki ujian atau pengerjaan skripsi untuk diserahkan sebagai karya sendiri."),
 ]
 for q, ans in faqs:
     with st.expander(q):
